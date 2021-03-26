@@ -8,9 +8,19 @@ class Mango(models.Model):
   name = models.CharField(max_length=100)
   ripe = models.BooleanField()
   color = models.CharField(max_length=100)
+
+  # get_user_model() returns the correct User model
+  # This takes the place of `User` or `'User'`
   owner = models.ForeignKey(
-      get_user_model(),
-      on_delete=models.CASCADE
+    get_user_model(),
+    # 'User',
+    # related_name is optional
+    # overrides the default field on the related model to represent
+    # the relationship
+    # User will have a field called `mangos` that is all the mangos w/
+    # foreignKeys pointing to the user
+    related_name='mangos',
+    on_delete=models.CASCADE
   )
 
   def __str__(self):

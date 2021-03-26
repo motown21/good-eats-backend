@@ -1,8 +1,15 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
+from.models.dish import Dish
 from .models.mango import Mango
 from .models.user import User
+
+class DishSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dish
+        fields = ('id', 'name', 'price', 'description', 'upload', 'owner')
+
 
 class MangoSerializer(serializers.ModelSerializer):
     class Meta:

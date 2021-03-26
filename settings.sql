@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS <project-name-here>;
-CREATE DATABASE <project-name-here>;
+DROP DATABASE IF EXISTS <good_eats_backend>;
+CREATE DATABASE <good_eats_backend>;
