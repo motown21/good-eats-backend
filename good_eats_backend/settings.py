@@ -91,7 +91,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'good_eats_backend.urls'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 TEMPLATES = [
     {
@@ -166,7 +165,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 # optional package: http://whitenoise.evans.io/en/stable/django.html
