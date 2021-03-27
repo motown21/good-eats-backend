@@ -28,7 +28,7 @@ if os.getenv('ENV') == 'development':
       'NAME': DB_NAME,
   }
   # Set debug to true
-  DEBUG = False
+  DEBUG = True
   # Only allow locally running client at port 7165 for CORS
   CORS_ORIGIN_WHITELIST = ['http://localhost:7165']
 else:
@@ -175,7 +175,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-))
+)
 
 
 
